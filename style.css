@@ -1,0 +1,102 @@
+body {
+  background: #f1f1f1;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+input,
+button,
+tr,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.container {
+  margin: 100px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  width: 300px;
+  height: 375px;
+  position: relative;
+}
+.calculator:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0px, 20px, 0) scale(1.15);
+  filter: blur(30px);
+  opacity: var(0.4);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+.calculator::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+.calculator table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.container form tr th input {
+  width: 195px;
+  height: 75px;
+  font-size: 2em;
+  padding: 0 15px;
+  background-color: #151515;
+  color: #fff;
+  font-weight: 600;
+  float: left;
+}
+.container form tr th button {
+  width: 75px;
+  height: 75px;
+  font-size: 2em;
+  background: #b600b9;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  float: none;
+}
+.container form tr th button:hover {
+  background-color: #fc00ff;
+  transition: all 0.2s ease-in-out;
+}
+.container form tr td button {
+  width: 75px;
+  height: 75px;
+  font-size: 2em;
+  background-color: #fefefe;
+  font-weight: 600;
+  cursor: pointer;
+}
+.container form tr td button:hover {
+  background-color: #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+.container p {
+  font-weight: 600;
+}
+.container a {
+  color: #b600b9;
+  text-decoration: none;
+}
+.container a:hover {
+  color: #fc00ff;
+}
